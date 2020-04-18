@@ -1,0 +1,16 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navigation.ejs') %>
+<main>
+  <div class="container">
+    <h1 class="py-3 text-center">Add a new product</h1>
+    <hr class="">
+    <form action="/admin/product" method="POST">
+      <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" name="title" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+  </div>
+</main>
+<%- include('partials/end.ejs') %>

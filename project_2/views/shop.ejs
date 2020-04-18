@@ -1,0 +1,20 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navigation.ejs') %>
+<main>
+  <div class="container">
+    <h1 class="py-3 text-center">Available Products</h1>
+    <hr class="my-0">
+    <div class="items-list py-3">
+      <h3>Products List</h3>
+      <% if (products.length > 0) { %>
+      <p>products count: <%= products.length %></p>
+      <% for (let product of products) { %>
+      <li><%= product.title %></li>
+      <% } %>
+      <% } else { %>
+      <p>no products</p>
+      <% } %>
+    </div>
+  </div>
+</main>
+<%- include('partials/end.ejs') %>
